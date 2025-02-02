@@ -184,4 +184,77 @@ TWILIO_AUTH_TOKEN="your_twilio_token"
 
 ---
 
+## Folder Structure
+
+skill-swap/
+├── src/
+│   ├── app/
+│   │   ├── (auth)/                   # Auth pages (login, signup)
+│   │   │   └── login/
+│   │   │       └── page.tsx
+│   │   ├── (public)/                 # Public pages (landing, about)
+│   │   │   └── page.tsx
+│   │   ├── dashboard/                # Protected routes
+│   │   │   ├── page.tsx              # Main dashboard
+│   │   │   ├── profile/
+│   │   │   │   └── page.tsx          # Profile settings
+│   │   │   └── chat/
+│   │   │       └── [channelId]/      # Dynamic chat routes
+│   │   │           └── page.tsx
+│   │   └── api/                      # API routes
+│   │       ├── auth/
+│   │       │   └── [...nextauth]/    # NextAuth.js config
+│   │       │       └── route.ts
+│   │       ├── transactions/
+│   │       │   └── route.ts          # Transaction logic
+│   │       └── matches/
+│   │           └── route.ts          # Match algorithm
+│   ├── components/
+│   │   ├── auth/                     # Auth components
+│   │   │   ├── LoginForm.tsx
+│   │   │   └── SocialAuthButtons.tsx
+│   │   ├── chat/                     # Chat UI
+│   │   │   ├── ChatWindow.tsx
+│   │   │   └── MessageBubble.tsx
+│   │   ├── dashboard/                # Dashboard components
+│   │   │   ├── MatchCard.tsx
+│   │   │   ├── SkillSelector.tsx
+│   │   │   └── CreditBadge.tsx
+│   │   └── ui/                       # Reusable UI (shadcn-ui)
+│   │       ├── button.tsx
+│   │       └── dropdown-menu.tsx
+│   ├── lib/
+│   │   ├── ably/                     # Ably client setup
+│   │   │   └── client.ts
+│   │   ├── prisma/                   # Prisma instance
+│   │   │   └── client.ts
+│   │   ├── validators/               # Zod validation schemas
+│   │   │   └── transaction.ts
+│   │   └── constants/
+│   │       └── skills.ts             # Skill categories/data
+│   ├── providers/                    # Context providers
+│   │   ├── ably-provider.tsx         # Ably context
+│   │   └── auth-provider.tsx         # Session context
+│   ├── hooks/                        # Custom hooks
+│   │   ├── use-matches.ts
+│   │   └── use-ably-channel.ts
+│   ├── types/                        # TypeScript types
+│   │   └── index.ts
+│   └── styles/                       # Global CSS/Tailwind
+│       └── globals.css
+├── public/                           # Static assets
+│   ├── icons/
+│   └── images/
+├── prisma/
+│   └── schema.prisma                 # Database schema
+├── .env.local                        # Environment variables
+├── .env.example                      # Env template
+├── tailwind.config.js
+├── postcss.config.js
+├── package.json
+├── README.md
+├── CONTRIBUTING.md
+└── LICENSE
+
+---
 License: [MIT](LICENSE)
