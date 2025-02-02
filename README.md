@@ -1,4 +1,6 @@
 
+
+
 # Skill Swap Platform: Full-Stack & Backend Flow 🔄
 
 This document outlines the **Full-Stack Interaction** and **Backend Workflow** for the Skill Swap Platform. It includes diagrams and detailed explanations of how data flows between the frontend, backend, and database.
