@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Skill Swap Platform 🔄
 
-## Getting Started
+An open-source platform for trading skills using a credit system. Built with **Next.js, Tailwind, TypeScript, and PostgreSQL**.
 
-First, run the development server:
+[Live Demo](#) | [API Documentation](#) | [Contribution Guide](CONTRIBUTING.md)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Table of Contents
+- [Features](#-features)
+- [Tech Stack](#-tech-stack)
+- [Workflow](#-workflow)
+  - [Frontend Navigation](#frontend-navigation-flow)
+  - [Backend Logic](#backend-workflow)
+  - [Full-Stack Interaction](#full-stack-flow)
+- [Setup](#-setup)
+- [Roadmap](#-roadmap)
+- [Contributing](#-contributing)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Features
+- **Skill Trading**: Exchange services using credits (1 credit = 1 hour).
+- **OAuth Login**: Sign up via Discord/Google.
+- **Realtime Chat**: Negotiate trades instantly.
+- **Escrow System**: Secure credit transactions.
+- **Notifications**: SMS/email alerts for trades.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🛠 Tech Stack
+| Layer          | Technologies                                                                 |
+|----------------|-----------------------------------------------------------------------------|
+| **Frontend**   | Next.js 14 (App Router), Tailwind CSS, TypeScript, shadcn-ui, Framer Motion |
+| **Backend**    | Next.js API Routes, Prisma ORM                                              |
+| **Database**   | PostgreSQL (hosted on Supabase)                                            |
+| **Auth**       | NextAuth.js                                                                |
+| **Realtime**   | Ably                                                                       |
+| **APIs**       | Twilio (SMS), Resend (Email)                                               |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔄 Workflow
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Frontend Navigation Flow
+```mermaid
+graph TD
+  A[Landing Page] -->|Login/Signup| B[Dashboard]
+  B --> C[Profile Settings]
+  B --> D[Browse Matches]
+  D -->|Select User| E[Chat Interface]
+  B -->|Propose Trade| F[Transaction Modal]
+  E -->|Confirm Trade| G[Transaction History]
