@@ -1,4 +1,3 @@
-```markdown
 # Skill Swap Platform 🔄
 
 An open-source platform for trading skills using a credit system. Built with **Next.js, Tailwind, TypeScript, and PostgreSQL**.
@@ -157,7 +156,3 @@ TWILIO_ACCOUNT_SID="your_twilio_sid"
 TWILIO_AUTH_TOKEN="your_twilio_token"
 ```
 
----
-
-This README includes detailed sections for **Backend Workflow** and **Full-Stack Interaction**, providing a clear understanding of the system architecture and the step-by-step interaction between components. Feel free to adjust any parts to fit your needs! 🚀
-```
