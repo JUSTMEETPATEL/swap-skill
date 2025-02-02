@@ -186,6 +186,7 @@ TWILIO_AUTH_TOKEN="your_twilio_token"
 
 ## Folder Structure
 
+```bash
 skill-swap/
 ├── src/
 │   ├── app/
@@ -255,6 +256,6 @@ skill-swap/
 ├── README.md
 ├── CONTRIBUTING.md
 └── LICENSE
+```
 
----
 License: [MIT](LICENSE)
